@@ -1,0 +1,22 @@
+import 'dart:async';
+import 'package:get_it/get_it.dart';
+import 'package:jolly_podcast/Features/authentication/data/datasources/auth_remote_datasource.dart';
+import 'package:jolly_podcast/Features/authentication/data/datasources/auth_remote_datasource_impl.dart';
+import 'package:jolly_podcast/Features/authentication/data/repositories/auth_repo_impl.dart';
+import 'package:jolly_podcast/Features/authentication/domain/repositories/auth_repository.dart';
+import 'package:jolly_podcast/Features/authentication/domain/usecases/login_usecase.dart';
+import 'package:jolly_podcast/Features/authentication/presentation/bloc/auth_bloc.dart';
+import 'package:jolly_podcast/Features/podcast/data/datasources/podcasts_datasource.dart';
+import 'package:jolly_podcast/Features/podcast/data/datasources/podcasts_datasource_impl.dart';
+import 'package:jolly_podcast/Features/podcast/data/repositories/audio_player_repo_impl.dart';
+import 'package:jolly_podcast/Features/podcast/data/repositories/podcast_repository_impl.dart';
+import 'package:jolly_podcast/Features/podcast/domain/repositories/audio_player_repo.dart';
+import 'package:jolly_podcast/Features/podcast/domain/repositories/podcast_repository.dart';
+import 'package:jolly_podcast/Features/podcast/domain/usecases/get_editor_pick.dart';
+import 'package:jolly_podcast/Features/podcast/domain/usecases/latest_episodes.dart';
+import 'package:jolly_podcast/Features/podcast/presentation/bloc/audio_player_bloc.dart';
+import 'package:jolly_podcast/Features/podcast/presentation/bloc/podcast_bloc.dart';
+import 'package:jolly_podcast/core/api/api_client.dart';
+import 'package:just_audio/just_audio.dart';
+
+part 'injection_container_main.dart';
