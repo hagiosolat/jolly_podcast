@@ -8,10 +8,12 @@ This is a mini jolly_podcase app built with Flutter
 
 - Create environment variable file in the root folder
 ```
- create the env file in the root foldor and name it ".env"
+ create the env file in the root folder with the name ".env"
 
  Copy the API link to the env file:
+
  Something like this:
+
  - BASE_URL = "https://api.jollypodcast.net/api/"
 ```
 - Run these commands to generate the URL_LINK
@@ -32,11 +34,11 @@ This is a mini jolly_podcase app built with Flutter
 > The default mode when `flutter run` command is used is debug mode
 
 ### Chosen state management approach
-- **_Bloc state management_** was used with clean architecture design pattern. This is obviously close to MVVM architecture.
-- Most importantly, Bloc State management implicitly function within that phase of acting as viewModel while interacting with the data layer and the Presentation Layer.
-- Where clean architectures comes in handing is the fact that the design has a way of naturally forcing separation of concerns. Whereby making the layers to be distinct and loosely coupled.
-- The loose coupling functionality comes to play with the use of `get_it package` for dependency injection. Hence, this enhances scalability in the long run.
-- Another way one can take a look at loose coupling is the contract implementation in the domain layer, this reduces or avoid depending on platform-specific code.
+- **_Bloc state management_** was used with clean architecture design pattern. This is related to MVVM architecture at the presentation layer
+- Bloc State management implicitly function as viewModel because it serves as the medium of  interacton between the data layer and the Presentation Layer.
+- Clean architectures implementation naturally enforces separation of concerns. This makes the distinct layers and loosely coupled components.
+- The loose coupling was achieved in this project with the use of `get_it package` for dependency injection. This enhances scalability and maintainability in the long run.
+- Another way to look at loose coupling of this design pattern is the contract implementation in the domain layer, this reduces or avoid depending on platform-specific code.
 - The basic folder structure for this architecture is very clear
 ```
 Data
