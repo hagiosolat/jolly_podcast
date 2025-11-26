@@ -31,7 +31,7 @@ This is a mini jolly_podcase app built with Flutter
 - Use `flutter run --release` to build and run the application in release mode.
 
 > [!NOTE]
-> The default mode when `flutter run` command is used is debug mode
+> The debug mode is the default mode when `flutter run` command is used
 
 ### Chosen state management approach
 - **_Bloc state management_** was used with clean architecture design pattern. This is related to MVVM architecture at the presentation layer
