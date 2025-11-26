@@ -189,39 +189,49 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           //PREVIOUS PODCAST BUTTON
-                          InkWell(
-                            onTap: () => context.read<AudioPlayerBloc>().add(
-                              PlayPreviousAudioEvent(),
+                          Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              splashColor: AppColor.lightGreen,
+                              highlightColor: AppColor.lightGreen,
+                              onTap: () => context.read<AudioPlayerBloc>().add(
+                                PlayPreviousAudioEvent(),
+                              ),
+                              child: SvgPicture.asset(Appasset.previousIcon),
                             ),
-                            child: SvgPicture.asset(Appasset.previousIcon),
                           ),
                           //FORWARD PODCAST BY 10 SECONDS
-                          InkWell(
-                            onTap: () => context.read<AudioPlayerBloc>().add(
-                              AdjustAudioCurrentPosition(
-                                adjustedDuration:
-                                    (currentPosition ??
-                                            Duration.zero -
-                                                Duration(seconds: 10)) <
-                                        Duration.zero
-                                    ? Duration.zero
-                                    : (currentPosition ?? Duration.zero) -
-                                          Duration(seconds: 10),
+                          Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              splashColor: AppColor.lemonGreen,
+                              highlightColor: AppColor.lightGreen,
+                              onTap: () => context.read<AudioPlayerBloc>().add(
+                                AdjustAudioCurrentPosition(
+                                  adjustedDuration:
+                                      (currentPosition ??
+                                              Duration.zero -
+                                                  Duration(seconds: 10)) <
+                                          Duration.zero
+                                      ? Duration.zero
+                                      : (currentPosition ?? Duration.zero) -
+                                            Duration(seconds: 10),
+                                ),
                               ),
-                            ),
-                            child: Stack(
-                              children: [
-                                SvgPicture.asset(
-                                  Appasset.backward,
-                                  width: 7.5.w,
-                                  height: 7.5.w,
-                                ),
-                                Positioned(
-                                  left: 2.4.w,
-                                  bottom: 1.4.h,
-                                  child: SvgPicture.asset(Appasset.tenLogo),
-                                ),
-                              ],
+                              child: Stack(
+                                children: [
+                                  SvgPicture.asset(
+                                    Appasset.backward,
+                                    width: 7.5.w,
+                                    height: 7.5.w,
+                                  ),
+                                  Positioned(
+                                    left: 2.4.w,
+                                    bottom: 1.4.h,
+                                    child: SvgPicture.asset(Appasset.tenLogo),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           //PLAY AND PAUSE BUTTON
@@ -242,36 +252,46 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
                                 : interactionButton(Appasset.playIcon, 3.0),
                           ),
                           //FAST FORWARD BY TEN 10 SECONDS
-                          InkWell(
-                            onTap: () => context.read<AudioPlayerBloc>().add(
-                              AdjustAudioCurrentPosition(
-                                adjustedDuration:
-                                    Duration(seconds: 10) +
-                                    (currentPosition ?? Duration(seconds: 0)),
+                          Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              splashColor: AppColor.lemonGreen,
+                              highlightColor: AppColor.lightGreen,
+                              onTap: () => context.read<AudioPlayerBloc>().add(
+                                AdjustAudioCurrentPosition(
+                                  adjustedDuration:
+                                      Duration(seconds: 10) +
+                                      (currentPosition ?? Duration(seconds: 0)),
+                                ),
                               ),
-                            ),
-                            child: Stack(
-                              children: [
-                                SvgPicture.asset(
-                                  Appasset.fastforward,
-                                  height: 7.5.w,
-                                  width: 7.5.w,
-                                ),
-                                Positioned(
-                                  left: 2.4.w,
-                                  bottom: 1.4.h,
-                                  // alignment: Alignment(1.5, 0.1),
-                                  child: SvgPicture.asset(Appasset.tenLogo),
-                                ),
-                              ],
+                              child: Stack(
+                                children: [
+                                  SvgPicture.asset(
+                                    Appasset.fastforward,
+                                    height: 7.5.w,
+                                    width: 7.5.w,
+                                  ),
+                                  Positioned(
+                                    left: 2.4.w,
+                                    bottom: 1.4.h,
+                                    // alignment: Alignment(1.5, 0.1),
+                                    child: SvgPicture.asset(Appasset.tenLogo),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                           //NEXT AUDIO BUTTON
-                          InkWell(
-                            onTap: () => context.read<AudioPlayerBloc>().add(
-                              PlayNextAudioEvent(),
+                          Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              splashColor: AppColor.lemonGreen,
+                              highlightColor: AppColor.lightGreen,
+                              onTap: () => context.read<AudioPlayerBloc>().add(
+                                PlayNextAudioEvent(),
+                              ),
+                              child: SvgPicture.asset(Appasset.nextIcon),
                             ),
-                            child: SvgPicture.asset(Appasset.nextIcon),
                           ),
                         ],
                       ),
