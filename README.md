@@ -6,7 +6,21 @@ This is a mini jolly_podcase app built with Flutter
 
 ### Step(s) to run the project:
 
-- Firstly, update the package dependencies using `flutter pub get` command when you clone the repo.
+- Create environment variable file in the root folder
+```
+ create the env file in the root foldor and name it ".env"
+
+ Copy the API link to the env file:
+ Something like this:
+ - BASE_URL = "https://api.jollypodcast.net/api/"
+```
+- Run these commands to generate the URL_LINK
+  ```
+  dart run build_runner clean
+  dart run build_runner build --delete-conflicting-outputs
+  ```
+
+- Update the package dependencies using `flutter pub get` command when you clone the repo. (Optional)
 
 - Use `flutter run --debug` to run the application in debug mode.
  
@@ -43,3 +57,4 @@ presentation
 ### Improvement with more time
 - The loading states of the images and preferrably implement a shimmer loading effect.
 - Feedbacks from the button interactions on the audio player screen. Probably, put some animation.
+- To persist and track each podcast last position when the user leaves the audio player screen or the application; such that the user can continue listening from where it was stopped.

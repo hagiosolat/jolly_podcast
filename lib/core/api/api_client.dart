@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:jolly_podcast/core/api/env.dart';
 import 'package:jolly_podcast/core/api/header_interceptor.dart';
 
 class ApiClient {
@@ -6,7 +7,7 @@ class ApiClient {
   ApiClient() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api.jollypodcast.net/api/',
+        baseUrl: Env.baseUrl,
         connectTimeout: const Duration(seconds: 15),
         receiveTimeout: const Duration(seconds: 15),
         sendTimeout: const Duration(seconds: 15),
