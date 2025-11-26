@@ -72,7 +72,6 @@ class AudioPlayerRepoImpl implements AudioPlayerRepo {
   @override
   ResultFuture<void> disposeAudioPlayer() async {
     try {
-      //**POSSIBILITY OF TECHNICALLY APPLYING NULL TO THE VALUE OF THE CONTROLLER */
       final result = await audioPlayer.stop();
       return Right(result);
     } catch (e) {
@@ -100,8 +99,6 @@ class AudioPlayerRepoImpl implements AudioPlayerRepo {
     }
   }
 
-  //**Since this already have onError Handling already,*/
-  //** there is no point picking right or left */
   @override
   Stream<ButtonState> listenToAudioPlayerState() async* {
     audioPlayer.playerStateStream.listen(

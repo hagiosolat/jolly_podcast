@@ -15,12 +15,7 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
     try {
       final response = await apiclient.post(
         'auth/login',
-        requestBody: {
-          'phone_number': phoneNumber,
-          'password': password,
-          //'08114227399'
-          //'Development@101',
-        },
+        requestBody: {'phone_number': phoneNumber, 'password': password},
       );
       return response.data;
     } on DioException catch (e) {
@@ -30,6 +25,3 @@ class AuthRemoteDatasourceImpl implements AuthRemoteDatasource {
     }
   }
 }
-
-//**So I can catch the network errors within the apiclient or handle that one and then */
-//**Catch any other errors from the datasource level */
