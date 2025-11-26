@@ -61,3 +61,4 @@ presentation
 - Feedbacks from the button interactions on the audio player screen. Probably, put some animation.
 - To persist and track each podcast last position when the user leaves the audio player screen or the application; such that the user can continue listening from where it was stopped.
 - To show the media player progress on the lock screen when the mobile app is locked or when it is working at the background.
+- Implement pagination
