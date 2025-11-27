@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:jolly_podcast/Features/authentication/presentation/bloc/auth_bloc.dart';
 import 'package:jolly_podcast/core/common/assetsnames/assetname.dart';
-import 'package:jolly_podcast/core/common/color/app_color.dart';
 import 'package:jolly_podcast/core/common/color/round_button.dart';
 import 'package:jolly_podcast/core/common/custom_text.dart';
 import 'package:jolly_podcast/core/common/custom_text_field.dart';
@@ -62,10 +61,16 @@ class _LoginScreenState extends State<LoginScreen> {
               width: 100.w,
               padding: EdgeInsets.only(left: 3.w, top: 10.h, right: 3.w),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: AlignmentGeometry.centerRight,
-                  end: AlignmentGeometry.centerLeft,
-                  colors: [AppColor.lemonGreen, Color(0xFF89F89C)],
+                gradient: RadialGradient(
+                  center: Alignment(1.0, -0.5),
+                  colors: [
+                    Color(0xFF56B512),
+                    Color(0xFF33932A),
+                    Color(0xFF197547),
+                    Color(0xFF197547),
+                  ],
+                  stops: [0.0, 0.4, 0.6, 1.0],
+                  radius: 1.7,
                 ),
               ),
 

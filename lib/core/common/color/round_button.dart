@@ -24,7 +24,7 @@ class _GenericButtonState extends State<GenericButton> {
     return GestureDetector(
       onTap: widget.ontap,
       child: Container(
-        height: 7.h,
+        height: 6.h,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.w),
           color: AppColor.buttonColor,

@@ -94,10 +94,16 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
           return Scaffold(
             body: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: AlignmentGeometry.centerRight,
-                  end: AlignmentGeometry.centerLeft,
-                  colors: [AppColor.lemonGreen, Color(0xFF89F89C)],
+                 gradient: RadialGradient(
+                  center: Alignment(1.0, -0.5),
+                  colors: [
+                    Color(0xFF56B512),
+                    Color(0xFF33932A),
+                    Color(0xFF197547),
+                    Color(0xFF197547),
+                  ],
+                  stops: [0.0, 0.35, 0.8, 1.0],
+                  radius: 1.7,
                 ),
               ),
               child: Padding(

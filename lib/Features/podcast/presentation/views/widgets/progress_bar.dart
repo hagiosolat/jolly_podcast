@@ -23,7 +23,7 @@ class _ProgressBarState extends State<ProgressBar> {
         //THE EMPTY OR START STATE OF THE PROGRESS
         Container(
           width: 90.w,
-          height: 1.2.h,
+          height: 1.h,
           decoration: BoxDecoration(
             color: AppColor.faintGreen,
             borderRadius: BorderRadius.circular(6),
@@ -31,7 +31,7 @@ class _ProgressBarState extends State<ProgressBar> {
         ),
         //Buffer indicator
         Container(
-          height: 1.2.h,
+          height: 1.h,
           width: widget.bufferProgress.isNegative
               ? 0.0
               : !widget.bufferProgress.isNaN
@@ -48,7 +48,7 @@ class _ProgressBarState extends State<ProgressBar> {
         ),
         //AUDIO PROGRESS INDICATOR
         Container(
-          height: 1.2.h,
+          height: 1.h,
           width: widget.audioProgress.isNegative
               ? 0.0
               : !widget.audioProgress.isNaN
