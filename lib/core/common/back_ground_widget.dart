@@ -20,6 +20,7 @@ class AppBaseView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  
                   //JOLLY LOGO
                   Image.asset(Appasset.jollyLogo),
                   //THREE BUTTONS AT THE TOP OF THE SCREENS
